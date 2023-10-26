@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Race Registration Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for form styling */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .registration-form {
+            background-color: #f8f9fa;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-check-label {
+            padding-left: 10px;
+        }
+
+        #submitButton {
+            margin-top: 20px;
+        }
+
+        .form-check-input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1 class="mt-4">Race Registration Form</h1>
+    <form id="registrationForm" class="registration-form">
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Title</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="title" value="Mr." required>
+                <label class="form-check-label">Mr.</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="title" value="Ms." required>
+                <label class="form-check-label">Ms.</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="title" value="Mrs." required>
+                <label class="form-check-label">Mrs.</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Complete Postal Mailing Address (with Postal Code & Country)</label>
+            <textarea class="form-control" id="address" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" required>
+        </div>
+
+        <div class="form-group">
+            <label for="occupation">Occupation</label>
+            <input type="text" class="form-control" id="occupation" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fax">Fax</label>
+            <input type="tel" class="form-control" id="fax">
+        </div>
+
+        <div class="form-group">
+            <label for="maritalStatus">Marital Status</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="maritalStatus" value="Single" required>
+                <label class="form-check-label">Single</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="maritalStatus" value="Married" required>
+                <label class="form-check-label">Married</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <p1>Emergancy - Contact:</p1>
+        <br><br>
+        <div class="form-group">
+            <label for="emergencyContact">Name</label>
+            <input type="text" class="form-control" id="emergencyContact" required>
+        </div>
+
+        <div class="form-group">
+            <label for="emailContact">Email</label>
+            <input type="email" class="form-control" id="emailContact" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passportPhone">Phone No</label>
+            <input type="tel" class="form-control" id="passportPhone" required>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label for="tripSelect">Select Trip</label>
+            <select class="form-control" id="tripSelect" required>
+                <option value="Stage Race">Stage Race</option>
+                <option value="Mt. Everest Challenge Marathon (4 day trip)">Mt. Everest Challenge Marathon (4 day trip)</option>
+                <option value="Mt. Everest Bike Rally">Mt. Everest Bike Rally</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="participantType">I am a</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="participantType" value="Runner" required>
+                <label class="form-check-label">Runner</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="participantType" value="Walker" required>
+                <label class="form-check-label">Walker</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="participantType" value="Cyclist" required>
+                <label class="form-check-label">Cyclist</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="tshirtSize">T-Shirt Size</label>
+            <select class="form-control" id="tshirtSize" required>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="X-Large">X-Large</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="smoker">Smoker</label>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="smoker" value="Yes" required>
+                <label class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="smoker" value="No" required>
+                <label class="form-check-label">No</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="roomSharing">Room Sharing Preference</label>
+            <select class="form-control" id="roomSharing" required>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <p1>Passport Details:</p1>
+        <br><br>
+        <div class="form-group">
+            <label for="passportName">Exact name as it appears on Passport</label>
+            <input type="text" class="form-control" id="passportName" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passportNumber">Passport Number</label>
+            <input type="text" class="form-control" id="passportNumber" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passportDateIssued">Date Issued</label>
+            <input type="date" class="form-control" id="passportDateIssued" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passportWhereIssued">Where Issued</label>
+            <input type="text" class="form-control" id="passportWhereIssued" required>
+        </div>
+
+        <div class="form-group">
+            <label for="passportDateExpires">Date Expires</label>
+            <input type="date" class="form-control" id="passportDateExpires" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input type="date" class="form-control" id="dateOfBirth" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="placeOfBirth">Place of Birth</label>
+            <input type="text" class="form-control" id="placeOfBirth" required>
+        </div>
+
+        <div class="form-group">
+            <label for="citizen">Citizen of</label>
+            <input type="text" class="form-control" id="citizen" required>
+        </div>
+
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="termsAndConditions" required>
+            <label class="form-check-label" for="termsAndConditions">I agree to all booking terms & conditions</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+    </form>
+</div>
+
+<script src="js.js"></script>
+</body>
+
+</html>
